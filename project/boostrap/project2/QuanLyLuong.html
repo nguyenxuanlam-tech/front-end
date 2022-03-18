@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ong thợ chăm chỉ</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a  class="nav-item nav-link active" id="nav-capnhap-tab" data-toggle="tab" 
+                    href="#nav-capnhap" role="tab" aria-controls="nav-capnhap" aria-selected="true">
+                    <i class="fas fa-edit"></i>Cập nhập
+                </a>
+                <a  class="nav-item nav-link" id="nav-danhsach-tab" data-toggle="tab" 
+                    href="#nav-danhsach" role="tab" aria-controls="nav-danhsach" aria-selected="false">
+                    <i class="fas fa-list"></i>Danh sách
+                </a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-capnhap" role="tabpanel" aria-labelledby="nav-capnhap-tab">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>
+                                <i class="fas fa-edit"></i>
+                                Nhập bảng lương tháng 5.
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <form action="">
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                            <label for="">Mã nhân viên:</label>
+                                            <input type="text" class="form-control" placeholder="Mã nhân viên.">
+                                            <small class="form-text text-muted">Mã nhân viên không được để trống. </small>
+                                    </div>
+                                    <div class="form-group col-6">
+                                            <label for="">Họ và tên nhân viên:</label>
+                                            <input type="text" class="form-control" placeholder="Họ và tên nhân viên.">
+                                            <small class="form-text text-muted">Họ và tên nhân viên không được để trống. </small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                            <label for="">Phòng ban:</label>
+                                            <input type="text" class="form-control" placeholder="Phòng ban.">
+                                            <small class="form-text text-muted">Phòng ban không được để trống. </small>
+                                    </div>
+                                    <div class="form-group col-6">
+                                            <label for="">Lương:</label>
+                                            <input type="number" class="form-control" placeholder="Lương nhân viên.">
+                                            <small class="form-text text-muted">Lương nhân viên không được để trống. </small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                            <label for="">Thưởng:</label>
+                                            <input type="number" class="form-control" placeholder="Thưởng cho nhân viên.">
+                                            <!-- <small class="form-text text-muted">Mã nhân viên không được để trống. </small> -->
+                                    </div>
+                                    <div class="form-group col-6">
+                                            <label for="">Phụ cấp:</label>
+                                            <input type="text" class="form-control" placeholder="Phụ cấp cho nhân viên.">
+                                            <!-- <small class="form-text text-muted">Mã nhân viên không được để trống. </small> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="">Ghi chú</label>
+                                            <textarea cols="30" rows="5" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="form-group col text-center">
+                                        <button type="submit" class="btn btn-dedault">
+                                            <i class="fas fa-save"></i>
+                                            Lưu
+                                        </button>
+                                        <button type="submit" class="btn btn-danger">
+                                            <i class="fas fa-times-circle"></i>
+                                            Hủy
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                    </div>
+            </div>
+            <div class="tab-pane fade" id="nav-danhsach" role="tabpanel" aria-labelledby="nav-danhsach-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1>
+                                    <i class="fab fa-forumbee"></i>
+                                    Bảng lương tháng 5 
+                                </h1>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr class="text-center table-warning">
+                                            <th rowspan="2" class="align-middle">Mã NV</th>
+                                            <th rowspan="2" class="align-middle">Họ và Tên</th>
+                                            <th colspan="3" class="align-middle">Thu nhâp</th>
+                                        </tr>
+                                        <tr class="text-center table-warning">
+                                            <th class="align-middle">Lương</th>
+                                            <th class="align-middle">Thưởng (hoa hồng)</th>
+                                            <th class="align-middle">Phụ cấp </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>NV100</td>
+                                            <td>Pham Thi My</td>
+                                            <td>6.000.000</td>
+                                            <td>3.990.000</td>
+                                            <td>400.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NV100</td>
+                                            <td>Pham Thi My</td>
+                                            <td>6.000.000</td>
+                                            <td>3.990.000</td>
+                                            <td>400.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NV100</td>
+                                            <td>Pham Thi My</td>
+                                            <td>6.000.000</td>
+                                            <td>3.990.000</td>
+                                            <td>400.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer">
+                                Lương của những con ong chăm chỉ.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
