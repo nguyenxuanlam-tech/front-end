@@ -112,12 +112,12 @@ body{
 .profile_content .profile .profile_details{
     display: flex;
     align-items: center;
-} 
+}
 .profile .profile_details img{
     height: 45px;
     width: 45px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 50%;
 }
 .profile .profile_details .name_job{
     margin-left: 10px;
