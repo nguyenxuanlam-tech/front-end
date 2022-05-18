@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="navigation">
+		<ul>
+			<li class="list">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="person-circle-outline"></ion-icon>
+					</span>
+					<span class="text">Profile</span>
+				</a>
+			</li>
+			<li class="list">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="chatbubbles-outline"></ion-icon>
+					</span>
+					<span class="text">Mesager</span>
+				</a>
+			</li>
+			<li class="list active">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="home-outline"></ion-icon>
+					</span>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li class="list">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="images-outline"></ion-icon>
+					</span>
+					<span class="text">Photos</span>
+				</a>
+			</li>
+			<li class="list">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="settings-outline"></ion-icon>
+					</span>
+					<span class="text">Setting</span>
+				</a>
+			</li>
+		</ul>
+		<div class="indicator" id="indicator"></div>
+	</div>
+
+	<script type="text/javascript">
+		const list = document.querySelectorAll('.list');
+		const indicator = document.querySelector('.indicator')
+		const tagList=Array.from(list);
+
+		var temp=Math.floor(list.length/2);
+		// console.log(tagList);
+		function activeLink(){
+			var that = this;
+			list.forEach((item) => item.classList.remove('active'));
+			this.classList.add('active');
+			tagList.map(function(el,i){
+				if(el.classList.contains('active')){
+					// console.log(el);
+					// console.log(i);
+					indicator.style.transform = "translateX(calc(70px * "+(i - Math.floor(list.length/2))+")";
+					indicator.style.transition = (Math.abs(temp-i) || 1)* 2+"s";
+					console.log((Math.abs(temp-i) || 1 ))
+					//xét điều kiện transition icon tab mới click
+					el.querySelector('.icon').style.transition = (Math.abs(temp-i) || 1)* 2+"s";
+					temp = i;
+				}
+			})
+		}
+
+
+		list.forEach((item) => item.addEventListener('click', activeLink));
+	</script>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
